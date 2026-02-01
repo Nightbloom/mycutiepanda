@@ -54,7 +54,7 @@ const ChocolateDay = () => {
           <img 
             src="https://media.tenor.com/ewl74fH1nM0AAAAC/dudu-and-bubu-eating-dudu-and-bubu-cake.gif" 
             alt="Dudu and Bubu eating cake" 
-            className="w-56 h-56 md:w-72 md:h-72 rounded-2xl shadow-xl mx-auto"
+            className="w-64 h-40 md:w-80 md:h-48 object-cover rounded-2xl shadow-xl mx-auto"
           />
         </motion.div>
 
