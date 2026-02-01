@@ -36,38 +36,19 @@ const TeddyDay = () => {
           </h1>
         </motion.div>
 
-        {/* Characters with teddy */}
-        <div className="flex justify-center items-end gap-2 mb-8 relative">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <BearCharacter className="w-32 h-32 md:w-44 md:h-44" pose="giving" />
-          </motion.div>
-
-          {/* Teddy bear gift */}
-          <motion.div
-            className="absolute text-5xl"
-            style={{ bottom: "30%", left: "50%", transform: "translateX(-50%)" }}
-            animate={{ 
-              y: [0, -8, 0], 
-              rotate: [-3, 3, -3],
-              scale: hugged ? 1.2 : 1
-            }}
-            transition={{ repeat: Infinity, duration: 2.5 }}
-          >
-            🧸
-          </motion.div>
-
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <PandaCharacter className="w-32 h-32 md:w-44 md:h-44" pose="receiving" />
-          </motion.div>
-        </div>
+        {/* Cute GIF */}
+        <motion.div 
+          className="mb-8"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4, type: "spring" }}
+        >
+          <img 
+            src="https://c.tenor.com/kbfEK8Q62iUAAAAC/bubu-dudu.gif" 
+            alt="Bubu and Dudu teddy" 
+            className="w-56 h-56 md:w-72 md:h-72 rounded-2xl shadow-xl mx-auto"
+          />
+        </motion.div>
 
         {/* Message */}
         <motion.div
