@@ -44,34 +44,19 @@ const ChocolateDay = () => {
           </h1>
         </motion.div>
 
-        {/* Characters sharing chocolate */}
-        <div className="flex justify-center items-end gap-2 mb-8 relative">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <BearCharacter className="w-32 h-32 md:w-44 md:h-44" pose="giving" />
-          </motion.div>
-
-          {/* Chocolate between them */}
-          <motion.div
-            className="absolute text-4xl"
-            style={{ bottom: "35%", left: "50%", transform: "translateX(-50%)" }}
-            animate={{ y: [0, -5, 0], rotate: [-5, 5, -5] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            🍫
-          </motion.div>
-
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <PandaCharacter className="w-32 h-32 md:w-44 md:h-44" pose="happy" />
-          </motion.div>
-        </div>
+        {/* Cute GIF */}
+        <motion.div 
+          className="mb-8"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4, type: "spring" }}
+        >
+          <img 
+            src="https://media.tenor.com/ewl74fH1nM0AAAAC/dudu-and-bubu-eating-dudu-and-bubu-cake.gif" 
+            alt="Dudu and Bubu eating cake" 
+            className="w-56 h-56 md:w-72 md:h-72 rounded-2xl shadow-xl mx-auto"
+          />
+        </motion.div>
 
         {/* Message */}
         <motion.div
