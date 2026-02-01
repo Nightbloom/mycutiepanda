@@ -13,7 +13,6 @@ const promises = [
   "I promise to be there in good times and bad 🤝",
   "I promise to listen to all your stories 👂",
   "I promise to bring you snacks when you're hungry 🍕",
-  "I promise to love you more each day 💕",
 ];
 
 const PromiseDay = () => {

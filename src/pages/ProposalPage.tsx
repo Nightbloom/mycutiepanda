@@ -82,26 +82,18 @@ const ProposalPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Characters */}
-        <div className="flex justify-center items-end gap-4 mb-8">
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
-            <BearCharacter className="w-28 h-28 md:w-40 md:h-40" pose="waving" />
-          </motion.div>
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 2,
-              ease: "easeInOut",
-              delay: 0.5,
-            }}
-          >
-            <PandaCharacter className="w-28 h-28 md:w-40 md:h-40" pose="blushing" />
-          </motion.div>
-        </div>
+        {/* Cute GIF */}
+        <motion.div 
+          className="mb-8"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        >
+          <img 
+            src="https://media1.tenor.com/m/nJD3n3PMz7UAAAAC/dudu.gif" 
+            alt="Cute couple" 
+            className="w-48 h-48 md:w-64 md:h-64 rounded-2xl shadow-xl mx-auto"
+          />
+        </motion.div>
 
         {/* Question */}
         <motion.h1
