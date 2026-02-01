@@ -26,8 +26,7 @@ const KissDay = () => {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
-          <span className="text-6xl">💋</span>
-          <h1 className="text-4xl md:text-5xl font-romantic text-valentine-red mt-2">
+          <h1 className="text-4xl md:text-5xl font-romantic text-valentine-red">
             Kiss Day
           </h1>
         </motion.div>
@@ -54,10 +53,10 @@ const KissDay = () => {
           transition={{ delay: 0.6 }}
         >
           <p className="text-xl md:text-2xl font-romantic text-foreground mb-4">
-            Every kiss from you is like magic... 💋✨
+            Every kiss from you is like magic... ✨
           </p>
           <p className="text-lg text-valentine-red font-romantic italic">
-            "Your kisses are sweeter than honey!" 🍯💋
+            "Your kisses are sweeter than honey!" 🍯
           </p>
         </motion.div>
 
@@ -76,8 +75,8 @@ const KissDay = () => {
         </motion.div>
       </motion.div>
 
-      {/* Floating kiss marks */}
-      {["💋", "💕", "💋"].map((emoji, i) => (
+      {/* Floating decorations */}
+      {["💕", "✨", "💕"].map((emoji, i) => (
         <motion.div
           key={i}
           className="absolute text-2xl"
