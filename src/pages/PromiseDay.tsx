@@ -49,37 +49,19 @@ const PromiseDay = () => {
           </h1>
         </motion.div>
 
-        {/* Characters making pinky promise */}
-        <div className="flex justify-center items-end gap-0 mb-8 relative">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <BearCharacter className="w-28 h-28 md:w-40 md:h-40" pose="hugging" />
-          </motion.div>
-
-          {/* Pinky promise symbol */}
-          <motion.div
-            className="absolute text-3xl"
-            style={{ bottom: "40%", left: "50%", transform: "translateX(-50%)" }}
-            animate={{ 
-              scale: [1, 1.2, 1],
-              rotate: [0, 10, 0]
-            }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            🤞✨
-          </motion.div>
-
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <PandaCharacter className="w-28 h-28 md:w-40 md:h-40" pose="hugging" />
-          </motion.div>
-        </div>
+        {/* Cute GIF */}
+        <motion.div 
+          className="mb-8"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4, type: "spring" }}
+        >
+          <img 
+            src="https://media.tenor.com/MPD8ohhApRYAAAAC/bubu-dudu.gif" 
+            alt="Bubu and Dudu promise" 
+            className="w-56 h-56 md:w-72 md:h-72 rounded-2xl shadow-xl mx-auto"
+          />
+        </motion.div>
 
         {/* Message */}
         <motion.div
