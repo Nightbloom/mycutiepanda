@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import BearCharacter from "@/components/characters/BearCharacter";
-import PandaCharacter from "@/components/characters/PandaCharacter";
 import FloatingHearts from "@/components/FloatingHearts";
 import MusicPlayer from "@/components/MusicPlayer";
+import HomeButton from "@/components/HomeButton";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const TeddyDay = () => {
   const navigate = useNavigate();
@@ -16,6 +15,7 @@ const TeddyDay = () => {
     <div className="min-h-screen bg-valentine-gradient flex flex-col items-center justify-center relative overflow-hidden px-4">
       <FloatingHearts count={12} />
       <MusicPlayer />
+      <HomeButton />
 
       <motion.div
         className="text-center z-10 max-w-2xl"
@@ -94,18 +94,10 @@ const TeddyDay = () => {
 
         {/* Navigation */}
         <motion.div
-          className="flex gap-4 flex-wrap justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <Button
-            variant="outline"
-            onClick={() => navigate("/chocolate-day")}
-            className="text-lg px-6 py-6 rounded-full"
-          >
-            <ArrowLeft className="mr-2 h-5 w-5" /> Go Back
-          </Button>
           <Button
             onClick={() => navigate("/promise-day")}
             className="text-lg px-8 py-6 rounded-full"
