@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
 import MusicPlayer from "@/components/MusicPlayer";
+import HomeButton from "@/components/HomeButton";
 import Confetti from "@/components/Confetti";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 
 const ValentinesDay = () => {
-  const navigate = useNavigate();
   const [confettiActive, setConfettiActive] = useState(true);
 
   useEffect(() => {
@@ -23,6 +20,7 @@ const ValentinesDay = () => {
     <div className="min-h-screen bg-valentine-gradient flex flex-col items-center justify-center relative overflow-hidden px-4 py-8">
       <FloatingHearts count={25} />
       <MusicPlayer />
+      <HomeButton />
       <Confetti isActive={confettiActive} />
 
       {/* Extra sparkles */}
@@ -124,22 +122,6 @@ const ValentinesDay = () => {
         >
           🎉 Tap for more celebration! 🎉
         </motion.button>
-
-        {/* Go Back button */}
-        <motion.div
-          className="mt-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <Button
-            variant="outline"
-            onClick={() => navigate("/kiss-day")}
-            className="text-lg px-6 py-6 rounded-full"
-          >
-            <ArrowLeft className="mr-2 h-5 w-5" /> Go Back
-          </Button>
-        </motion.div>
       </motion.div>
 
       {/* Corner decorations */}
